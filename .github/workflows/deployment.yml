@@ -1,14 +1,15 @@
 name: Test-env-deployment
 on:
   pull_request:
-    # types:
-    #  - opened
+    types:
+      - closed
     branches:
-      - development
+      - test
+      - main
   
 jobs:
   test:
-    if: github.event.pull_request.base.ref == 'Test' 
+    if: github.event.pull_request.base.ref == 'test' 
     # && github.event.pull_request.merged == true
     runs-on: windows-latest
     environment: test
