@@ -4,7 +4,7 @@ on:
     types:
       - closed
     branches:
-      - test
+      - Test
 jobs:
   test:
     if: github.event.pull_request.base.ref == 'development' && github.event.pull_request.merged == true
