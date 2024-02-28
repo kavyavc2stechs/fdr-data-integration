@@ -5,11 +5,15 @@ on:
       - opened
     branches:
       - Test
+      - development
+      - main
+      - Kavya01
 jobs:
   test:
-    if: github.event.pull_request.base.ref == 'Test' && github.event.pull_request.merged == true
+    if: github.event.pull_request.base.ref == 'Test' 
+    # && github.event.pull_request.merged == true
     runs-on: windows-latest
-    environment: development
+    environment: Test
 
     steps:
     # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it.
