@@ -1,19 +1,17 @@
 name: Test-env-deployment
 on:
   pull_request:
-    types:
-      - opened
+    # types:
+    #  - opened
     branches:
-      - Test
       - development
-      - main
-      - Kavya01
+  
 jobs:
   test:
     if: github.event.pull_request.base.ref == 'Test' 
     # && github.event.pull_request.merged == true
     runs-on: windows-latest
-    environment: Test
+    environment: test
 
     steps:
     # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it.
@@ -27,7 +25,7 @@ jobs:
           TargetWorkspaceName: 'synapse-fdr-test'
           TemplateFile: './synapse-fdr/TemplateForWorkspace.json'
           ParametersFile: './synapse-fdr/TemplateParametersForWorkspace.json'
-          #OverrideArmParameters: './parameters/testparameters.yaml'
+          # OverrideArmParameters: './parameters/testparameters.yaml'
           environment: 'Azure Public'
           resourceGroup: 'rg-c2s-internal-0010'
           clientId: ${{secrets.AZURE_CLIENT_ID}}
