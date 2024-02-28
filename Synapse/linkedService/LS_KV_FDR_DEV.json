@@ -1,0 +1,10 @@
+{
+	"name": "LS_KV_FDR_DEV",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kv-fdr-dev.vault.azure.net/"
+		}
+	}
+}
