@@ -1,0 +1,15 @@
+{
+	"name": "LS_KV_FDR_DEV",
+	"properties": {
+		"parameters": {
+			"PARAM_LS_KV_BASE_URL": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "@{linkedService().PARAM_LS_KV_BASE_URL}"
+		}
+	}
+}
