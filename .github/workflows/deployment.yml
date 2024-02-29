@@ -20,7 +20,7 @@ jobs:
 
     # Runs a single command using the runners shell
       - name: Synapse workspace deployment
-        uses: Azure/Synapse-workspace-deployment@V1.8.0
+        uses: azure/synapse-workspace-deployment@release-1.0
             
         with:
           TargetWorkspaceName: 'synapse-fdr-test'
