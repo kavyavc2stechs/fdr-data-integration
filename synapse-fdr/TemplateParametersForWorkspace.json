@@ -8,6 +8,12 @@
 		"synapse-fdr-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:synapse-fdr.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
+		"LS_KV_FDR_DEV_properties_typeProperties_baseUrl": {
+			"value": "@{linkedService().PARAM_LS_KV_BASE_URL}"
+		},
+		"LS_safdrdev_properties_typeProperties_url": {
+			"value": "@{linkedService().PARAM_LS_STORAGE_ACC_URL}"
+		},
 		"synapse-fdr-WorkspaceDefaultStorage_properties_typeProperties_url": {
 			"value": "https://safdrdev.dfs.core.windows.net"
 		}
